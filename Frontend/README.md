@@ -166,10 +166,6 @@ The frontend communicates with the backend API. Make sure the backend is running
 
 ---
 
-### Update Notes 
-
-- Added instructions to fetch the full project and timestamp for clarity.
-
 ### Fetching the Latest Code
 
 The repository houses both frontend and backend code. When cloning or pulling, you'll obtain the entire project structure:
