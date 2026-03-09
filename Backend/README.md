@@ -1,4 +1,4 @@
-# Full Gen AI Backend
+# PrepForge Backend
 
 A Node.js/Express.js backend API for the Full Gen AI application, providing authentication, AI services, and data management.
 
@@ -7,7 +7,7 @@ A Node.js/Express.js backend API for the Full Gen AI application, providing auth
 - User authentication with JWT tokens
 - Password hashing with bcrypt
 - MongoDB database integration
-- AI service integration
+- **AI service integration using Google GenAI SDK**
 - CORS support for frontend communication
 - Cookie-based session management
 
@@ -97,6 +97,11 @@ The server will start on `http://localhost:3000`
 - `cookie-parser`: Cookie parsing
 - `cors`: Cross-origin resource sharing
 - `dotenv`: Environment variable management
+- `@google/genai`: Google GenAI SDK for AI features
+- `multer`: File upload handling
+- `pdf-parse`: PDF processing
+- `zod`: Validation library
+- `zod-to-json-schema`: Convert Zod schemas to JSON Schema
 
 ## Development Dependencies
 
@@ -113,3 +118,25 @@ The server will start on `http://localhost:3000`
 ## License
 
 ISC
+
+---
+
+### Update Notes (March 9, 2026)
+
+- README refreshed to include fetch instructions for both backend and frontend.
+- Added timestamp to indicate last update.
+
+### Fetching the Latest Code
+
+To ensure you have the complete and latest copy of the project, clone or pull the repository from the GitHub remote:
+
+```bash
+# clone the entire repository (contains both Backend and Frontend)
+git clone https://github.com/HarshVardhan264/Full-gen-ai.git
+
+# or, if you already have the repo, update it:
+cd Full-gen-ai
+git pull origin main
+```
+
+This will download the **Backend** and **Frontend** directories along with all files.

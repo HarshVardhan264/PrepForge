@@ -1,4 +1,4 @@
-# Full Gen AI Frontend
+# PrepForge Frontend
 
 A modern React frontend application built with Vite, featuring authentication and AI-powered functionality.
 
@@ -8,6 +8,7 @@ A modern React frontend application built with Vite, featuring authentication an
 - Protected routes
 - Responsive design with SCSS
 - API integration with Axios
+- **AI-powered features using Google GenAI SDK**
 - Modern React with hooks
 - Fast development with Vite
 
@@ -116,6 +117,7 @@ The frontend communicates with the backend API. Make sure the backend is running
 - `react-router`: Client-side routing
 - `axios`: HTTP client for API calls
 - `sass`: CSS preprocessor
+- `@google/genai`: Google GenAI SDK for AI features
 
 ### Development
 - `@vitejs/plugin-react`: Vite React plugin
@@ -161,3 +163,25 @@ The frontend communicates with the backend API. Make sure the backend is running
 4. Run linting: `npm run lint`
 5. Test thoroughly
 6. Submit a pull request
+
+---
+
+### Update Notes 
+
+- Added instructions to fetch the full project and timestamp for clarity.
+
+### Fetching the Latest Code
+
+The repository houses both frontend and backend code. When cloning or pulling, you'll obtain the entire project structure:
+
+```bash
+# clone the repository (Frontend + Backend)
+git clone https://github.com/HarshVardhan264/Full-gen-ai.git
+
+# or update an existing clone:
+cd Full-gen-ai
+git pull origin main
+```
+
+Ensure you run the commands from the workspace root to access both directories.
+
