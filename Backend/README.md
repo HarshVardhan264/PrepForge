@@ -115,16 +115,7 @@ The server will start on `http://localhost:3000`
 4. Test thoroughly
 5. Submit a pull request
 
-## License
-
-ISC
-
 ---
-
-### Update Notes (March 9, 2026)
-
-- README refreshed to include fetch instructions for both backend and frontend.
-- Added timestamp to indicate last update.
 
 ### Fetching the Latest Code
 
