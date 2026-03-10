@@ -122,17 +122,3 @@ PrepForge is useful for:
 - Anyone looking for AI-assisted interview preparation
 
 ---
-
-## Future Improvements
-
-Possible enhancements include:
-
-- AI mock interview simulations
-- Resume optimization suggestions
-- Progress tracking dashboard
-- Voice-based interview practice
-- Integration with coding platforms
-
----
-
-This README makes the GitHub project look like a serious production project, which helps recruiters a lot.
