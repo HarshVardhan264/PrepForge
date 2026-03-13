@@ -92,12 +92,6 @@ Preview the production build locally:
 npm run preview
 ```
 
-### Linting
-
-Run ESLint to check for code issues:
-```bash
-npm run lint
-```
 
 ## Available Routes
 
