@@ -67,7 +67,6 @@ Frontend/
    npm install
    ```
 
-## Usage
 
 ### Development
 
@@ -77,20 +76,6 @@ npm run dev
 ```
 
 The application will be available at `http://localhost:5173`
-
-### Build for Production
-
-Build the application for production:
-```bash
-npm run build
-```
-
-### Preview Production Build
-
-Preview the production build locally:
-```bash
-npm run preview
-```
 
 
 ## Available Routes
