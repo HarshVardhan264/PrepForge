@@ -89,6 +89,23 @@ This structure ensures that preparation is organized and actionable.
 
 ---
 
+## ATS-Friendly Resume Generation
+
+In addition to interview preparation, PrepForge offers an **ATS-friendly resume generation** feature that creates a tailored, downloadable PDF resume optimized for Applicant Tracking Systems.
+
+### How It Works
+
+After generating an interview report, users can download a customized resume that:
+
+- **Incorporates job-specific keywords** from the job description to improve ATS compatibility
+- **Highlights relevant experience** and skills that match the target role
+- **Maintains professional formatting** suitable for both human recruiters and ATS parsing
+- **Is concise and well-structured** (ideally 1 page) for maximum impact
+
+The generated resume is based on the same inputs (resume, job description, and self-description) used for the interview report, ensuring consistency and relevance.
+
+---
+
 ## Key Features
 
 - Job-specific interview preparation
@@ -96,6 +113,7 @@ This structure ensures that preparation is organized and actionable.
 - Skill gap analysis
 - Personalized preparation roadmap
 - Interview readiness score
+- **ATS-friendly resume generation and download**
 
 ---
 

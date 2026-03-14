@@ -10,6 +10,7 @@ A Node.js/Express.js backend API for the Full Gen AI application, providing auth
 - **AI service integration using Google GenAI SDK**
 - CORS support for frontend communication
 - Cookie-based session management
+- **ATS-friendly resume PDF generation**
 
 ## Tech Stack
 
@@ -80,6 +81,12 @@ The server will start on `http://localhost:3000`
 - `POST /api/auth/register` - User registration
 - `POST /api/auth/login` - User login
 - `POST /api/auth/logout` - User logout
+
+#### Interview Reports
+- `POST /api/interview/` - Generate interview report
+- `GET /api/interview/report/:interviewId` - Get interview report by ID
+- `GET /api/interview/` - Get all interview reports for user
+- `POST /api/interview/resume/pdf/:interviewReportId` - Generate and download ATS-friendly resume PDF
 
 ## Environment Variables
 

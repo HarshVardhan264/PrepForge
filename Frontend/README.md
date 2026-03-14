@@ -11,6 +11,7 @@ A modern React frontend application built with Vite, featuring authentication an
 - **AI-powered features using Google GenAI SDK**
 - Modern React with hooks
 - Fast development with Vite
+- **ATS-friendly resume generation and download**
 
 ## Tech Stack
 
