@@ -172,6 +172,8 @@ async function geeratePdfFromHtml(htmlContent) {
   const page = await browser.newPage();
   await page.setContent(htmlContent, { waitUntil: "networkidle0" });
 
+  
+
   const pdfBuffer = await page.pdf({ format: "A4" });
   await browser.close();
   return pdfBuffer;
@@ -208,6 +210,12 @@ It should be strictly of 1 page.
     },
   });
   const jsonContent = JSON.parse(response.text);
+
+console.log("Gemini response:", response.text);
+console.log("Parsed JSON:", jsonContent);
+console.log("HTML:", jsonContent.html);
+
+
   const pdfBuffer = await geeratePdfFromHtml(jsonContent.html);
 
   return pdfBuffer;

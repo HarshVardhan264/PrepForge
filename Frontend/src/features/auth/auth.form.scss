@@ -39,3 +39,113 @@ main{
         text-decoration: none;
     }
 }
+
+/* Futuristic wide geometric display face — closest Google Fonts match to
+   the reference's sci-fi outlined typography. */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+
+/* ------------------------------------------------------------------ */
+/* Layout                                                              */
+/* ------------------------------------------------------------------ */
+
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000000; /* adjust: background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.loading-screen__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.loading-screen__svg {
+  /* adjust: text size — scales responsively between mobile and desktop */
+  width: min(90vw, 820px);
+  height: auto;
+  display: block;
+}
+
+/* ------------------------------------------------------------------ */
+/* Typography                                                          */
+/* ------------------------------------------------------------------ */
+
+.loading-screen__text {
+  font-family: "Orbitron", "Michroma", sans-serif;
+  font-weight: 700;
+  font-size: 108px;
+  letter-spacing: 14px; /* adjust: letter spacing */
+  text-transform: uppercase;
+}
+
+.loading-screen__text--outline {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.28); /* adjust: outline thickness/visibility below */
+  stroke-width: 1.4px; /* adjust: outline thickness */
+  paint-order: stroke;
+}
+
+.loading-screen__text--fill {
+  fill: #ffffff; /* adjust: white highlight intensity/color */
+  stroke: none;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.55)); /* adjust: highlight glow intensity */
+}
+
+/* ------------------------------------------------------------------ */
+/* Sweep animation                                                     */
+/* ------------------------------------------------------------------ */
+
+.loading-screen__sweep-rect {
+  /* adjust: sweep width — set via the rect's "width" attribute in the JSX */
+  animation: loading-sweep 1.2s cubic-bezier(0.65, 0, 0.35, 1) infinite; /* adjust: animation speed via duration */
+  will-change: transform;
+}
+
+@keyframes loading-sweep {
+  0% {
+    transform: translateX(-450px);
+  }
+  100% {
+    transform: translateX(1450px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-screen__sweep-rect {
+    animation: none;
+  }
+  .loading-screen__text--fill {
+    fill: #ffffff;
+    opacity: 0.35;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                          */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 1024px) {
+  .loading-screen__text {
+    letter-spacing: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .loading-screen__text {
+    letter-spacing: 6px;
+  }
+}
