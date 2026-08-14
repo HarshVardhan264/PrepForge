@@ -92,7 +92,10 @@ const Home = () => {
         <div className="header-content">
           {/* Logo */}
           <a href="/" className="logo">
-            <span className="logo-mark">&lt;/&gt;</span>
+            <span className="logo-mark">
+              <img src="/fox.png" alt="PrepForge" />
+            </span>
+
             <span className="logo-text">PrepForge</span>
           </a>
 
@@ -104,7 +107,7 @@ const Home = () => {
 
             <a href="#resources">RESOURCES</a>
 
-            <a href="#about">ABOUT</a>
+            <a href="/about">ABOUT</a>
 
             <a href="#contact">CONTACT</a>
           </nav>
@@ -248,7 +251,11 @@ const Home = () => {
         <div className="footer-content">
           {/* Brand */}
           <div className="footer-brand">
-            <span className="footer-logo">&lt;/&gt;</span>
+            <a href="/" className="logo">
+            <span className="logo-mark">
+              <img src="/fox.png" alt="PrepForge" />
+            </span>
+          </a>
 
             <div>
               <span className="footer-brand-name">PrepForge</span>

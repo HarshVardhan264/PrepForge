@@ -1,5 +1,5 @@
-import React , {useState} from 'react'
-import { useNavigate , Link } from 'react-router'
+import React, { useState } from 'react'
+import { useNavigate, Link } from 'react-router'
 import { useAuth } from '../hooks/useAuth'
 
 
@@ -11,17 +11,17 @@ const Register = () => {
   const [password, setPassword] = useState("")
 
 
-  const {loading, handleRegister} = useAuth()
+  const { loading, handleRegister } = useAuth()
 
 
 
   const handleSubmit = async (e) => {
-        e.preventDefault()
-        await handleRegister({username,email,password})
-        navigate("/")
-  }  
+    e.preventDefault()
+    await handleRegister({ username, email, password })
+    navigate("/")
+  }
 
-  if(loading){
+  if (loading) {
     return (<main
       className="loading-screen"
       role="status"
@@ -118,35 +118,118 @@ const Register = () => {
     </main>)
   }
   return (
-    <main>
-      <div className="form-container">
-        <h1>Register</h1>
+    <main className="auth-page">
+      <div className="auth-card">
 
-        <form action="" onSubmit={handleSubmit}>
-            <div className="input-group">
-                <label htmlFor="username">Username</label>
-                <input 
-                onChange={(e)=> {setUsername(e.target.value)}}
-                type="text" id="username" name="username" placeholder="Enter Username" />
+        {/* Brand */}
+        <div className="auth-brand">
+          <span className="logo-mark">
+              <img src="/fox.png" alt="PrepForge" />
+            </span>
+          <span>PrepForge</span>
+        </div>
 
-            </div>
-            <div className="input-group">
-                <label htmlFor="email">Email</label>
-                <input
-                onChange={(e)=> {setEmail(e.target.value)}}
-                type="email" id="email" name="email" placeholder="Enter email address" />
+        {/* Heading */}
+        <div className="auth-heading">
+          <p className="auth-eyebrow">GET STARTED</p>
 
+          <h1>Create your account</h1>
+
+          <p>
+            Start building your personalized interview preparation plan.
+          </p>
+        </div>
+
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="auth-form">
+
+          {/* Username */}
+          <div className="input-group">
+            <label htmlFor="username">
+              Username
+            </label>
+
+            <div className="input-wrapper">
+              <span className="input-symbol">◉</span>
+
+              <input
+                onChange={(e) => setUsername(e.target.value)}
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your username"
+                required
+              />
             </div>
-            <div className="input-group">
-                <label htmlFor="password">Password</label>
-                <input 
-                onChange={(e)=> {setPassword(e.target.value)}}
-                type="password" id='password' name="password" placeholder="Enter password" />
+          </div>
+
+
+          {/* Email */}
+          <div className="input-group">
+            <label htmlFor="email">
+              Email address
+            </label>
+
+            <div className="input-wrapper">
+              <span className="input-symbol">@</span>
+
+              <input
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
             </div>
-            <button className='button primary-button'>Register</button>
+          </div>
+
+
+          {/* Password */}
+          <div className="input-group">
+            <label htmlFor="password">
+              Password
+            </label>
+
+            <div className="input-wrapper">
+              <span className="input-symbol">••</span>
+
+              <input
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a password"
+                required
+              />
+            </div>
+          </div>
+
+
+          {/* Button */}
+          <button
+            type="submit"
+            className="auth-button"
+          >
+            <span>Create account</span>
+
+            <span className="auth-button-arrow">
+              →
+            </span>
+          </button>
+
         </form>
 
-        <p>Already have an account? <Link to={"/login"}>Login</Link></p>
+
+        {/* Login */}
+        <div className="auth-footer">
+          <span>Already have an account?</span>
+
+          <Link to="/login">
+            Sign in
+          </Link>
+        </div>
+
       </div>
     </main>
   )

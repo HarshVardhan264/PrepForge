@@ -117,31 +117,95 @@ const Login = () => {
     </main>)
   }
   return (
-    <main>
-      <div className="form-container">
-        <h1>Login</h1>
+  <main className="auth-page">
+    <div className="auth-card">
 
-        <form action="" onSubmit={handleSubmit}>
-            <div className="input-group">
-                <label htmlFor="email">Email</label>
-                <input
-                onChange={(e) => {setEmail(e.target.value)}}
-                type="email" id="email" name="email" placeholder="Enter email address" />
+      {/* Brand */}
+      <div className="auth-brand">
+            <span className="logo-mark">
+              <img src="/fox.png" alt="PrepForge" />
+            </span>
 
-            </div>
-            <div className="input-group">
-                <label htmlFor="password">Password</label>
-                <input
-                onChange={(e) => {setPassword(e.target.value)}}
-                type="password" id='password' name="password" placeholder="Enter password" />
-            </div>
-            <button className='button primary-button'>Login</button>
-        </form>
-
-        <p>Don't have an account? <Link to={"/register"}>Register</Link></p>
+            
+        <span>PrepForge</span>
       </div>
-    </main>
-  )
+
+      {/* Heading */}
+      <div className="auth-heading">
+        <p className="auth-eyebrow">WELCOME BACK</p>
+
+        <h1>Ready to prepare?</h1>
+
+        <p>
+          Sign in to continue your interview preparation.
+        </p>
+      </div>
+
+      {/* Form */}
+      <form onSubmit={handleSubmit} className="auth-form">
+
+        <div className="input-group">
+          <label htmlFor="email">
+            Email address
+          </label>
+
+          <div className="input-wrapper">
+            <span className="input-symbol">@</span>
+
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+        </div>
+
+
+        <div className="input-group">
+          <label htmlFor="password">
+            Password
+          </label>
+
+          <div className="input-wrapper">
+            <span className="input-symbol">••</span>
+
+            <input
+              onChange={(e) => setPassword(e.target.value)}
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+        </div>
+
+
+        <button
+          type="submit"
+          className="auth-button"
+        >
+          <span>Sign in</span>
+          <span className="auth-button-arrow">→</span>
+        </button>
+
+      </form>
+
+      {/* Register */}
+      <div className="auth-footer">
+        <span>Don't have an account?</span>
+
+        <Link to="/register">
+          Create one
+        </Link>
+      </div>
+
+    </div>
+  </main>
+);
 }
 
 export default Login

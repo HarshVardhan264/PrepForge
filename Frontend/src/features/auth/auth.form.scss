@@ -1,44 +1,4 @@
-main{
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    .form-container{
-        min-width: 350px;
-
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    form{
-
-        display: flex;
-        flex-direction: column;
-        gap:0.5rem;
-    }
-
-    .input-group{
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-
-        input{
-            border: none;
-            outline: none;
-            padding-inline: 1rem;
-            padding-block: 0.7rem;
-            border-radius: 0.8rem;
-        }
-    }
-
-    a{
-        color: #e1034d;
-        text-decoration: none;
-    }
-}
 
 /* Futuristic wide geometric display face — closest Google Fonts match to
    the reference's sci-fi outlined typography. */
@@ -78,6 +38,530 @@ main{
   width: min(90vw, 820px);
   height: auto;
   display: block;
+}
+
+/* =========================================================
+   AUTH PAGE
+========================================================= */
+
+.auth-page {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(145, 180, 80, 0.06),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 75%,
+      rgba(100, 150, 70, 0.045),
+      transparent 35%
+    ),
+    #090d0b;
+
+  color: #e8ede6;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SUBTLE BACKGROUND LINES
+========================================================= */
+
+.auth-page::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(160, 195, 105, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(160, 195, 105, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 110px 110px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 85%
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LOGIN CARD
+========================================================= */
+
+.auth-card {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(430px, 100%);
+
+  padding: 38px;
+
+  box-sizing: border-box;
+
+  background: rgba(
+    13,
+    18,
+    15,
+    0.92
+  );
+
+  border: 1px solid rgba(
+    160,
+    195,
+    105,
+    0.14
+  );
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.4);
+
+  backdrop-filter: blur(10px);
+}
+
+
+/* Small top accent */
+
+.auth-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 38px;
+
+  width: 55px;
+  height: 2px;
+
+  background: #b2d66a;
+
+  border-radius: 0 0 4px 4px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.auth-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 42px;
+
+  color: #dce4d8;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+}
+
+
+.auth-logo {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(
+    178,
+    214,
+    106,
+    0.4
+  );
+
+  border-radius: 8px;
+
+  color: #b2d66a;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  background: rgba(
+    178,
+    214,
+    106,
+    0.06
+  );
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.auth-heading {
+  margin-bottom: 30px;
+}
+
+
+.auth-eyebrow {
+  margin: 0 0 10px;
+
+  color: #9db66e;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
+}
+
+
+.auth-heading h1 {
+  margin: 0;
+
+  color: #edf1eb;
+
+  font-size: 32px;
+
+  line-height: 1.15;
+
+  font-weight: 600;
+
+  letter-spacing: -1.2px;
+}
+
+
+.auth-heading > p:last-child {
+  margin: 11px 0 0;
+
+  max-width: 330px;
+
+  color: #737d75;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.auth-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 21px;
+}
+
+
+/* =========================================================
+   INPUT GROUP
+========================================================= */
+
+.input-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.input-group label {
+  color: #a1aaa1;
+
+  font-size: 11px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.input-wrapper {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   INPUT ICON
+========================================================= */
+
+.input-symbol {
+  position: absolute;
+
+  left: 15px;
+
+  color: #71805f;
+
+  font-size: 11px;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.input-wrapper input {
+  width: 100%;
+
+  height: 50px;
+
+  box-sizing: border-box;
+
+  padding:
+    0
+    15px
+    0
+    42px;
+
+  background: #090e0b;
+
+  border: 1px solid rgba(
+    160,
+    195,
+    105,
+    0.13
+  );
+
+  border-radius: 9px;
+
+  outline: none;
+
+  color: #e9eee7;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.input-wrapper input::placeholder {
+  color: #4e5750;
+}
+
+
+.input-wrapper input:hover {
+  border-color: rgba(
+    160,
+    195,
+    105,
+    0.25
+  );
+}
+
+
+.input-wrapper input:focus {
+  background: #0b100d;
+
+  border-color: rgba(
+    178,
+    214,
+    106,
+    0.55
+  );
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      178,
+      214,
+      106,
+      0.055
+    );
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.auth-button {
+  width: 100%;
+
+  height: 52px;
+
+  margin-top: 4px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 17px;
+
+  border: 1px solid rgba(
+    190,
+    220,
+    120,
+    0.2
+  );
+
+  border-radius: 9px;
+
+  background: #a9ce5b;
+
+  color: #10150e;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.auth-button:hover {
+  background: #b8db6a;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 25px
+    rgba(
+      150,
+      190,
+      80,
+      0.12
+    );
+}
+
+
+.auth-button:active {
+  transform: translateY(0);
+}
+
+
+.auth-button-arrow {
+  font-size: 18px;
+
+  transition: transform 0.2s ease;
+}
+
+
+.auth-button:hover .auth-button-arrow {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.auth-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  margin-top: 27px;
+
+  color: #626c64;
+
+  font-size: 11px;
+}
+
+
+.auth-footer a {
+  color: #abc968;
+
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+
+.auth-footer a:hover {
+  color: #c1df7b;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .auth-page {
+    padding: 25px 16px;
+  }
+
+  .auth-card {
+    padding: 30px 23px;
+  }
+
+  .auth-card::before {
+    left: 23px;
+  }
+
+  .auth-brand {
+    margin-bottom: 32px;
+  }
+
+  .auth-heading h1 {
+    font-size: 28px;
+  }
+
 }
 
 /* ------------------------------------------------------------------ */
@@ -148,4 +632,115 @@ main{
   .loading-screen__text {
     letter-spacing: 6px;
   }
+}
+/* =========================================================
+   TYPOGRAPHY SIZE UPDATE
+========================================================= */
+
+/* Brand */
+.auth-brand {
+  font-size: 17px;
+}
+
+
+/* Small "WELCOME BACK" text */
+.auth-eyebrow {
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+
+/* Main heading */
+.auth-heading h1 {
+  font-size: 38px;
+
+  line-height: 1.15;
+
+  letter-spacing: -1.5px;
+}
+
+
+/* Subtitle */
+.auth-heading > p:last-child {
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  max-width: 360px;
+}
+
+
+/* Form labels */
+.input-group label {
+  font-size: 13px;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* Input text */
+.input-wrapper input {
+  font-size: 14px;
+
+  height: 54px;
+}
+
+
+/* Input placeholder */
+.input-wrapper input::placeholder {
+  font-size: 13px;
+}
+
+
+/* Input symbols */
+.input-symbol {
+  font-size: 12px;
+}
+
+
+/* Login button */
+.auth-button {
+  height: 55px;
+
+  font-size: 14px;
+}
+
+
+/* Button arrow */
+.auth-button-arrow {
+  font-size: 20px;
+}
+
+
+/* Register footer */
+.auth-footer {
+  font-size: 13px;
+}
+
+
+/* Register link */
+.auth-footer a {
+  font-size: 13px;
+}
+
+/* =========================================================
+   REGISTER PAGE
+========================================================= */
+
+.auth-card:has(#username) {
+  padding-top: 38px;
+  padding-bottom: 34px;
+}
+
+.auth-card:has(#username) .auth-brand {
+  margin-bottom: 30px;
+}
+
+.auth-card:has(#username) .auth-heading {
+  margin-bottom: 25px;
+}
+
+.auth-card:has(#username) .auth-form {
+  gap: 17px;
 }
