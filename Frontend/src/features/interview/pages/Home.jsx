@@ -91,12 +91,12 @@ const Home = () => {
       <header className="header">
         <div className="header-content">
           {/* Logo */}
-          <a href="/" className="logo">
+          <a href="/about" className="logo">
             <span className="logo-mark">
               <img src="/fox.png" alt="PrepForge" />
             </span>
 
-            <span className="logo-text">PrepForge</span>
+            <span className="logo-text">Prep<span className="Forge">Forge</span></span>
           </a>
 
           {/* Navigation */}
@@ -109,7 +109,7 @@ const Home = () => {
 
             <a href="/about">ABOUT</a>
 
-            <a href="#contact">CONTACT</a>
+            <a href="/contact">CONTACT</a>
           </nav>
         </div>
       </header>
@@ -119,7 +119,7 @@ const Home = () => {
         <section className="hero-section">
           <div className="hero-content">
             <h1 className="hero-title">
-              Generate Your AI Interview
+              Generate Your AI <span className="Interview">Interview</span>
               <br />
               Report
             </h1>
@@ -251,14 +251,14 @@ const Home = () => {
         <div className="footer-content">
           {/* Brand */}
           <div className="footer-brand">
-            <a href="/" className="logo">
+            <a href="/about" className="logo">
             <span className="logo-mark">
               <img src="/fox.png" alt="PrepForge" />
             </span>
           </a>
 
             <div>
-              <span className="footer-brand-name">PrepForge</span>
+              <span className="footer-brand-name">Prep<span className="Forge">Forge</span></span>
               <span className="footer-tagline">
                 Prepare. Practice. Get Hired.
               </span>
@@ -274,7 +274,7 @@ const Home = () => {
           <div className="footer-links">
             <a href="#privacy">PRIVACY</a>
             <a href="#terms">TERMS</a>
-            <a href="#contact">CONTACT ↗</a>
+            <a href="/contact">CONTACT ↗</a>
           </div>
         </div>
       </footer>

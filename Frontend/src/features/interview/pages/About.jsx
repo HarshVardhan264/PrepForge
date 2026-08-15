@@ -10,7 +10,7 @@ const About = () => {
       ===================================================== */}
 
       <header className="about-header">
-        <a href="/" className="about-logo">
+        <a href="/about" className="about-logo">
           <span className="about-logo-mark">
             <img src="/fox2.png" alt="PrepForge" />
           </span>
@@ -496,7 +496,7 @@ const About = () => {
 
       <footer className="about-footer">
 
-        <div className="footer-brand">
+        <a href="/about" className="footer-brand">
 
           <span className="about-logo-mark">
             <img src="/fox2.png" alt="PrepForge" />
@@ -506,7 +506,7 @@ const About = () => {
             Prep<span>Forge</span>
           </span>
 
-        </div>
+        </a>
 
         <p>
           © 2026 PrepForge AI. Built for better interviews.

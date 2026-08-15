@@ -818,6 +818,9 @@
   font-weight: 600;
 
   letter-spacing: -0.4px;
+  .Forge{
+    color: #f47717;
+  }
 }
 
 /* =========================
@@ -1253,7 +1256,7 @@
 .left-panel .input-textarea {
   width: 100%;
 
-  min-height: 390px;
+  min-height: 470px;
 
   box-sizing: border-box;
 
@@ -2123,10 +2126,13 @@
 .footer-brand-name {
   color: #eef2eb;
 
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
 
   letter-spacing: -0.3px;
+  .Forge{
+    color: #f47717;
+  }
 }
 
 .footer-tagline {
